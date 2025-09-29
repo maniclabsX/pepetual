@@ -1,6 +1,8 @@
-# PEPETUAL Millionaire — Public Launch Kit
+# PEPETUAL — Public Launch Kit
 
-Welcome to the public repository bundle for the PEPETUAL Millionaire ecosystem. This snapshot contains everything a community member, partner, or auditor needs to understand how the protocol works, verify the deployed contracts, and run the public dashboard locally.
+PEPETUAL is a mainnet DeFi protocol that routes a 9.69 % trading fee into PEPE buys, powering nine-tier pond spillovers (≈$10K → $1M), automatic burns, Frogholder rewards, and community development. This bundle packages the public-facing docs, contract data, and configuration you need to explore or contribute to the ecosystem.
+
+Welcome to the public repository bundle for the PEPETUAL ecosystem. This snapshot contains everything a community member, partner, or auditor needs to understand how the protocol works, verify the deployed contracts, and run the public dashboard locally.
 
 ## What's Inside
 
