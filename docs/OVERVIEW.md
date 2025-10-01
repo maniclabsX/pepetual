@@ -5,7 +5,8 @@ PEPETUAL Millionaire is a mainnet DeFi protocol that routes a 9.69 % trading f
 ## Key Components
 
 - **PEPETUAL Token (`ERC20`)** — Handles tax routing, limit logic, and exposes owner hooks for depositing PEPE into the pond and rewards buffers.
-- **PondManager** — Receives PEPE from the token, schedules spillovers, snapshots Frogholders, and calls Chainlink VRF to select the catch recipient.
+- **PondManager (Ethereum)** — Receives PEPE from the token, commits Merkle roots of eligible Frogholders, and finalizes spillovers once randomness is mirrored back on-chain.
+- **Arbitrum Pond Helper (L2)** — Mirrors each Merkle root to Arbitrum One, requests Chainlink VRF, and emits a winning seed that is relayed to mainnet.
 - **CommunityRaiseVault** — Recorded the original fair-launch raise. Contributors claimed PEPETUAL after LP seeding. The vault now primarily houses claim history and emergency controls.
 - **Public Dashboard** — A read-only interface for Frogholders and contributors. It surfaces pond progress, spillover history, token stats, and claim tooling for the raise vault.
 - **Owner Dashboard (Private)** — Separate operational tooling for limit exemptions, manual deposits, and emergency controls. Not included in the public repo.
@@ -13,9 +14,9 @@ PEPETUAL Millionaire is a mainnet DeFi protocol that routes a 9.69 % trading f
 ## Spillover Cycle
 
 1. Trades fill the active Pond with PEPE until the Overflow Point is hit.
-2. PondManager captures a snapshot of all Frogholders (wallets with ≥ 100 PEPETUAL).
-3. Chainlink VRF selects one Frogholder to catch the spillover.
-4. The chosen wallet receives the PEPE catch automatically.
+2. A keeper snapshots all Frogholders (wallets with ≥ 100 PEPETUAL) and stores the Merkle root on PondManager.
+3. The same root is mirrored to the Arbitrum helper, which requests Chainlink VRF for verifiable randomness.
+4. The emitted seed is relayed back to Ethereum; anyone can submit the Merkle proof to claim the catch.
 5. The Pond advances to the next tier and begins filling again.
 
 ## Tokenomics Snapshot
@@ -35,11 +36,12 @@ PEPETUAL Millionaire is a mainnet DeFi protocol that routes a 9.69 % trading f
 | Contract | Address |
 | --- | --- |
 | PEPETUAL Token | `0xdC80d4Cb7fF1Fe185B4509C400aeC5A7d17FB19A` |
-| PondManager | `0x70c9056362afEDeECc51b7C6A74A1D88e912Fb57` |
-| CommunityRaiseVault | `0xd63816880ACf01703CD10f70aFE2A65b23518725` |
+| PondManager (Ethereum) | `0x664B094c34568fEC7fe1776ca8AeBEB4746C431b` |
+| Arbitrum Pond Helper | `0x164fbd9B6dE4F3711bbAad6706E1d4087b0986f0` |
+| CommunityRaiseVault | `0x768f997cA7736282603AE9cca8734713ac2233E5` |
 | PEPE Token | `0x6982508145454Ce325dDbE47a25d4ec3d2311933` |
 | Uniswap V2 Router | `0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D` |
-| Chainlink VRF Coordinator | `0xD7f86b4b8Cae7D942340FF628F82735b7a20893a` |
+| Chainlink VRF Coordinator (Arbitrum One) | `0x3C0Ca683b403E37668AE3DC4FB62F4B29B6f7a3e` |
 
 The same data is available in machine-readable form inside `contracts/addresses.mainnet.json`.
 

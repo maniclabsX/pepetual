@@ -4,7 +4,7 @@ The Community Raise Vault powered the 72-hour fair launch for PEPETUAL Millionai
 
 ## Timeline at a Glance
 
-1. **Announce** — Core team publishes the raise window, contribution caps (if any), and the vault address: `0xd63816880ACf01703CD10f70aFE2A65b23518725`.
+1. **Announce** — Core team publishes the raise window, contribution caps (if any), and the vault address: `0x768f997cA7736282603AE9cca8734713ac2233E5`.
 2. **Start Raise** — Ops call `startRaise()`, unlocking deposits for exactly 72 hours (unless closed early).
 3. **Contribute** — Anyone can send ETH through the dashboard or directly to the vault address. Deposits emit `ContributionReceived` events with contributor and amount.
 4. **Close / Expire** — Ops either close the raise early (`closeRaise()`) or let the timer expire. At this point new deposits are rejected.
