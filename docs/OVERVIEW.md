@@ -38,7 +38,7 @@ PEPETUAL Millionaire is a mainnet DeFi protocol that routes a 9.69 % trading f
 | PEPETUAL Token | `0xdC80d4Cb7fF1Fe185B4509C400aeC5A7d17FB19A` |
 | PondManager (Ethereum) | `0x664B094c34568fEC7fe1776ca8AeBEB4746C431b` |
 | Arbitrum Pond Helper | `0x164fbd9B6dE4F3711bbAad6706E1d4087b0986f0` |
-| CommunityRaiseVault | `0x768f997cA7736282603AE9cca8734713ac2233E5` |
+| CommunityRaiseVault | `0xBe6F9e80Df056529C4d913BCdC490890E8B6B70f` |
 | PEPE Token | `0x6982508145454Ce325dDbE47a25d4ec3d2311933` |
 | Uniswap V2 Router | `0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D` |
 | Chainlink VRF Coordinator (Arbitrum One) | `0x3C0Ca683b403E37668AE3DC4FB62F4B29B6f7a3e` |
