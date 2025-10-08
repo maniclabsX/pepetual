@@ -36,7 +36,7 @@ V1 Frogholders can migrate 1:1 to V2 via the Migration Vault:
 
 ### Contracts
 
-- **`contracts/PEPETUAL-claude.sol`** - V2 token with fixed fee processing
+- **`contracts/PEPETUALV2.sol`** - V2 token with fixed fee processing
 - **`contracts/MigrationVault.sol`** - V1→V2 exchange contract with Merkle verification
 
 ### Snapshot Data
