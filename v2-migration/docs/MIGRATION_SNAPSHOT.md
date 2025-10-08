@@ -7,7 +7,7 @@
 
 ## Executive Summary
 
-**Merkle Root:** `0x55ab19ef8bcf241ebea7652344703a1c68a5f8737e9c13633b8c778bf9d8435d`
+**Merkle Root:** `0x4ecf13901d8a1cffab3aeb805052edfa52a686f5a308c65c7e474dfee9d140ec`
 
 **Snapshot Block:** 23,529,904 (Ethereum Mainnet)
 
@@ -124,7 +124,7 @@ const root = tree.getRoot();
 _v1: 0xdC80d4Cb7fF1Fe185B4509C400aeC5A7d17FB19A  // V1 PEPETUAL (broken)
 _v2: [DEPLOY V2 FIRST]                            // V2 PEPETUAL (fixed)
 _router: 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D  // Uniswap V2 Router
-_merkleRoot: 0x55ab19ef8bcf241ebea7652344703a1c68a5f8737e9c13633b8c778bf9d8435d
+_merkleRoot: 0x4ecf13901d8a1cffab3aeb805052edfa52a686f5a308c65c7e474dfee9d140ec
 ```
 
 **Copy-paste ready (after V2 deployed):**
